@@ -9,6 +9,7 @@ import pandas as pd
 from pyresparser import ResumeParser
 import nltk
 nltk.download('stopwords')
+from nltk.corpus import stopwords
 
 st.set_page_config(
     page_title="Resume Ranks",
