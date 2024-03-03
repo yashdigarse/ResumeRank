@@ -77,7 +77,7 @@ def main():
            
             keywords = st_tags(label='Update Skills to generate questions:', text='Press enter to add more', value=data['skills']) 
             skills = ','.join(keywords)
-            query="Generate top random 5 interview question and answer on for each skills in "+skills + " individually for beginners. in hindi"
+            query="Generate top random 5 interview question and answer on for each skills in "+skills + " individually for beginners."
             
             if st.button('### Generate Questions') and keywords !="":
                 def get_chatgpt_response():
