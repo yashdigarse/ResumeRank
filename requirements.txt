@@ -1,5 +1,5 @@
 streamlit
-
+https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/stopwords.zip
 docx2txt
 PyPDF2
 gensim
