@@ -7,6 +7,6 @@ spacy==2.3.5
 nltk==3.6.2
 
 https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
-pyresparser
+pyresparser==1.0.6
 streamlit_tags
 openai
