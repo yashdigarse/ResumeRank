@@ -5,8 +5,8 @@ import json
 
 import pandas as pd
 import nltk
-nltk.download('stopwords')
-from nltk.corpus import stopwords
+nltk.download()
+
 
 from openai import OpenAI
 client = OpenAI(
