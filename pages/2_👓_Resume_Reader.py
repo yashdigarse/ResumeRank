@@ -4,6 +4,8 @@ from streamlit_tags import st_tags
 import json
 
 import pandas as pd
+import nltk
+nltk.download('stopwords')
 
 from openai import OpenAI
 client = OpenAI(
