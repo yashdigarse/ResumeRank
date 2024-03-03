@@ -4,7 +4,8 @@ from gensim.models.doc2vec import Doc2Vec
 import numpy as np
 from numpy.linalg import norm
 import pandas as pd
-
+import nltk
+nltk.download('stopwords')
 
 
 def preprocess_text(text):
