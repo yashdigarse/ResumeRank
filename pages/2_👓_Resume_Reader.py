@@ -7,7 +7,7 @@ import pandas as pd
 
 from openai import OpenAI
 client = OpenAI(
-  api_key="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" 
+  api_key= st.secrets["APIKEY"]
 )
 
 
