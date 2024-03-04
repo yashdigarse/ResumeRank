@@ -55,7 +55,11 @@ def main():
             
         
             Name=data['name']
-            matchscore= utility.match(resume_text,job_description)
+            if job_description =="":
+                matchscore=0
+            else :
+                matchscore= utility.match(resume_text,job_description)
+            
             res =Resume.Resume(uploaded_file.name,Name,matchscore)
     
             lstResume.append(res)
