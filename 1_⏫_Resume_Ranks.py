@@ -37,7 +37,7 @@ def main():
     st.markdown('<p ><span class="big-font">Resume Rank</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
     
     job_description = st.text_area("Enter the job description:")
-    uploaded_files = st.file_uploader("Upload multiple resumes in pdf format" ,accept_multiple_files=True)
+    uploaded_files = st.file_uploader("Upload multiple resumes in pdf format" , type="pdf",accept_multiple_files=True)
     lstResume=[]
     if uploaded_files:
         for uploaded_file in uploaded_files:
