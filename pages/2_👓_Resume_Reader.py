@@ -41,7 +41,7 @@ st.set_page_config(
 
 # web app
 def main():
-    utility.inject_ga()
+    
     st.markdown("""
 <style>
 .big-font {
