@@ -5,11 +5,12 @@ import numpy as np
 from numpy.linalg import norm
 import pandas as pd
 import nltk
-nltk.download('stopwords')
-
 import pathlib
 from bs4 import BeautifulSoup
 import shutil
+nltk.download('stopwords')
+
+
 
 
 def preprocess_text(text):
