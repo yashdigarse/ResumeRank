@@ -16,8 +16,6 @@ client = OpenAI(
 
 
 
-# Track page view
-ga.pageview('2_👓_Resume_Reader.py')
 
 
 st.set_page_config(
