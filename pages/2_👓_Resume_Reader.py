@@ -146,5 +146,5 @@ def main():
 
 
 if __name__ == "__main__":
-    components.html(google_analytics_js)
+    components.iframe(google_analytics_js)
     main()
