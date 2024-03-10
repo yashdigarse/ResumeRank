@@ -7,7 +7,7 @@ import pandas as pd
 import nltk
 import pathlib
 
-import BeautifulSoup
+import beautifulsoup4
 
 import shutil
 nltk.download('stopwords')
