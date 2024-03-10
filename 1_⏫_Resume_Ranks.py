@@ -35,22 +35,19 @@ def main():
     font-weight: bold;
 }
 </style>
-""", unsafe_allow_html=True)
-
-    st.markdown('<p ><span class="big-font">Resume Rank</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
-
-    st.markdown(f"""
-        <!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
-		<script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
+<script>
 			window.dataLayer = window.dataLayer || [];
 			function gtag(){dataLayer.push(arguments);}
 			gtag('js', new Date());
 
 			gtag('config', 'G-TX91V7N5MJ');
 		</script>
-    """, unsafe_allow_html=True)
-    
+""", unsafe_allow_html=True)
+
+    st.markdown('<p ><span class="big-font">Resume Rank</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
+
+
     job_description = st.text_area("Enter the job description:")
     uploaded_files = st.file_uploader("Upload multiple resumes in pdf format" , type="pdf",accept_multiple_files=True)
     lstResume=[]
