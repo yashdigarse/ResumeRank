@@ -14,7 +14,7 @@ client = OpenAI(
   api_key= st.secrets["APIKEY"]
 )
 
-from googleanalytics import GoogleAnalytics
+from google_analytics import GoogleAnalytics
 # Initialize Google Analytics tracker
 ga = GoogleAnalytics('G-TX91V7N5MJ')
 
