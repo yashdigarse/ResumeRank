@@ -95,7 +95,7 @@ def main():
         
          with interviewQuestion:
             st.header ("Interview Questions")
-            ga.event('interviewQuestion', 'Click')
+            
            
             keywords = st_tags(label='Update Skills to generate questions:', text='Press enter to add more', value=data['skills']) 
             skills = ','.join(keywords)
