@@ -6,7 +6,7 @@ gensim
 numpy
 pandas
 bs4
-BeautifulSoup4
+beautifulsoup4
 pyresparser
 streamlit_tags
 openai
