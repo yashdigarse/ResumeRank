@@ -14,9 +14,7 @@ client = OpenAI(
   api_key= st.secrets["APIKEY"]
 )
 
-from google_analytics import GoogleAnalytics
-# Initialize Google Analytics tracker
-ga = GoogleAnalytics('G-TX91V7N5MJ')
+
 
 # Track page view
 ga.pageview('2_👓_Resume_Reader.py')
@@ -45,9 +43,23 @@ def main():
 
     st.markdown('<p ><span class="big-font">Resume Reader</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
 
+    
+    st.markdown(
+    """
+        <!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TX91V7N5MJ');
+		</script>
+    """, unsafe_allow_html=True)
+
     uploaded_file = st.file_uploader('Upload Resume', type=['pdf'])
     if uploaded_file is not None:
-         ga.event('ResumeReader', 'Click')
+         
          data = ResumeParser(uploaded_file).get_extracted_data()
          resSummary,interviewQuestion=st.tabs(["Resume Summary","Interview Questions",])
          with resSummary:

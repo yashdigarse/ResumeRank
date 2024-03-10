@@ -10,12 +10,7 @@ from pyresparser import ResumeParser
 import nltk
 nltk.download('stopwords')
 
-from google_analytics import GoogleAnalytics
-# Initialize Google Analytics tracker
-ga = GoogleAnalytics('G-TX91V7N5MJ')
 
-# Track page view
-ga.pageview('1_⏫_Resume_Ranks.py')
 
 
 st.set_page_config(
@@ -43,6 +38,19 @@ def main():
 """, unsafe_allow_html=True)
 
     st.markdown('<p ><span class="big-font">Resume Rank</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
+
+    st.markdown(
+    """
+        <!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag(){dataLayer.push(arguments);}
+			gtag('js', new Date());
+
+			gtag('config', 'G-TX91V7N5MJ');
+		</script>
+    """, unsafe_allow_html=True)
     
     job_description = st.text_area("Enter the job description:")
     uploaded_files = st.file_uploader("Upload multiple resumes in pdf format" , type="pdf",accept_multiple_files=True)
@@ -72,7 +80,7 @@ def main():
     
             lstResume.append(res)
     if len(lstResume) > 0 :
-        ga.event('ResumeRank', 'Click')
+        
         df = pd.DataFrame([t.__dict__ for t in lstResume])
         df1=df[['Name','Filename', 'MatchScore']]
         #st.write(df1)
