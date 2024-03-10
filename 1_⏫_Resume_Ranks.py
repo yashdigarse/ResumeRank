@@ -109,5 +109,5 @@ def main():
        
 
 if __name__ == "__main__":
-    components.html(google_analytics_js)
+    #components.html(google_analytics_js)
     main()
