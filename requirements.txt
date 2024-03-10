@@ -5,7 +5,7 @@ PyPDF2
 gensim
 numpy
 pandas
-BeautifulSoup4
+BeautifulSoup
 pyresparser
 streamlit_tags
 openai
