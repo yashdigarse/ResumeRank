@@ -5,6 +5,7 @@ PyPDF2
 gensim
 numpy
 pandas
+bs4
 BeautifulSoup
 pyresparser
 streamlit_tags
