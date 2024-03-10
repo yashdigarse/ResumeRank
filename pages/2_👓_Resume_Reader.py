@@ -8,10 +8,18 @@ import nltk
 nltk.download('stopwords')
 
 
+
 from openai import OpenAI
 client = OpenAI(
   api_key= st.secrets["APIKEY"]
 )
+
+from google_analytics import GoogleAnalytics
+# Initialize Google Analytics tracker
+ga = GoogleAnalytics('G-TX91V7N5MJ')
+
+# Track page view
+ga.pageview('2_👓_Resume_Reader.py')
 
 
 st.set_page_config(
@@ -39,6 +47,7 @@ def main():
 
     uploaded_file = st.file_uploader('Upload Resume', type=['pdf'])
     if uploaded_file is not None:
+         ga.event('ResumeReader', 'Click')
          data = ResumeParser(uploaded_file).get_extracted_data()
          resSummary,interviewQuestion=st.tabs(["Resume Summary","Interview Questions",])
          with resSummary:
@@ -74,6 +83,7 @@ def main():
         
          with interviewQuestion:
             st.header ("Interview Questions")
+            ga.event('interviewQuestion', 'Click')
            
             keywords = st_tags(label='Update Skills to generate questions:', text='Press enter to add more', value=data['skills']) 
             skills = ','.join(keywords)

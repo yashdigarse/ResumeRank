@@ -10,6 +10,14 @@ from pyresparser import ResumeParser
 import nltk
 nltk.download('stopwords')
 
+from google_analytics import GoogleAnalytics
+# Initialize Google Analytics tracker
+ga = GoogleAnalytics('G-TX91V7N5MJ')
+
+# Track page view
+ga.pageview('1_⏫_Resume_Ranks.py')
+
+
 st.set_page_config(
     page_title="Resume Ranks",
     page_icon="⏫",
@@ -64,6 +72,7 @@ def main():
     
             lstResume.append(res)
     if len(lstResume) > 0 :
+        ga.event('ResumeRank', 'Click')
         df = pd.DataFrame([t.__dict__ for t in lstResume])
         df1=df[['Name','Filename', 'MatchScore']]
         #st.write(df1)
