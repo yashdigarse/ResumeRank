@@ -2,7 +2,7 @@ import streamlit as st
 from pyresparser import ResumeParser
 from streamlit_tags import st_tags
 import json
-
+import utility
 import pandas as pd
 import nltk
 nltk.download('stopwords')
