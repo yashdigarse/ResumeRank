@@ -6,7 +6,7 @@ from numpy.linalg import norm
 import pandas as pd
 import nltk
 import pathlib
-import BeautifulSoup
+
 import shutil
 nltk.download('stopwords')
 
