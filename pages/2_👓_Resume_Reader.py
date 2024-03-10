@@ -42,8 +42,7 @@ def main():
     st.markdown('<p ><span class="big-font">Resume Reader</span>  <span class="s-font">Powered by AI.</span></p>', unsafe_allow_html=True)
 
     
-    st.markdown(
-    """
+    st.markdown("""
         <!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
 		<script>
