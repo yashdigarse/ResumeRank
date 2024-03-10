@@ -6,7 +6,6 @@ from numpy.linalg import norm
 import pandas as pd
 import nltk
 import pathlib
-import bs4
 
 from bs4 import BeautifulSoup
 
