@@ -10,7 +10,7 @@ from pyresparser import ResumeParser
 import nltk
 nltk.download('stopwords')
 
-from google_analytics import GoogleAnalytics
+from googleanalytics import GoogleAnalytics
 # Initialize Google Analytics tracker
 ga = GoogleAnalytics('G-TX91V7N5MJ')
 
