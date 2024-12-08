@@ -4,7 +4,7 @@ docx2txt
 PyPDF2
 gensim
 numpy
-
+beautifulsoup4==4.12.2
 pyresparser
 streamlit_tags
 openai
