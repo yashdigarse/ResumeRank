@@ -8,8 +8,8 @@ beautifulsoup4==4.12.2
 pyresparser
 streamlit_tags
 openai
-spacy==3.5.0
-en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.0.0/en_core_web_sm-3.0.0-py3-none-any.whl
+spacy
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 
 
 
