@@ -9,10 +9,10 @@ nltk.download('stopwords')
 
 
 
-from openai import OpenAI
-client = OpenAI(
-  api_key= st.secrets["APIKEY"]
-)
+#from openai import OpenAI
+#client = OpenAI(
+#  api_key= st.secrets["APIKEY"]
+#)
 
 import streamlit.components.v1 as components
 
@@ -105,7 +105,7 @@ def main():
          with interviewQuestion:
             st.header ("Interview Questions")
 
-            
+
 
 if __name__ == "__main__":
     #components.iframe(google_analytics_js)
