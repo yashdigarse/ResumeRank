@@ -13,20 +13,6 @@ nltk.download('stopwords')
 import streamlit.components.v1 as components
 
 
-google_analytics_js = """
-
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-TX91V7N5MJ"></script>
-    <script>
-			window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-
-			gtag('config', 'G-TX91V7N5MJ');
-		</script>
-    """
-
-
 
 st.set_page_config(
     page_title="Resume Ranks",
