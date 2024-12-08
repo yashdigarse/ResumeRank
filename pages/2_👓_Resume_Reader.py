@@ -104,46 +104,8 @@ def main():
         
          with interviewQuestion:
             st.header ("Interview Questions")
+
             
-           
-            keywords = st_tags(label='Update Skills to generate questions:', text='Press enter to add more', value=data['skills']) 
-            skills = ','.join(keywords)
-            query="Generate top random 5 interview question and answer on for each skills in "+skills + " individually for beginners."
-            
-            if st.button('### Generate Questions') and keywords !="":
-                def get_chatgpt_response():
-                    messages = [{"role": "user", "content": query}]
-                    try:
-                        response = client.chat.completions.create(
-                        model="gpt-3.5-turbo",
-                        messages=messages,
-                        )
-                        return response.choices[0].message
-                    except openai.OpenAIError as e:
-                        print("Error:", e)
-                        return None
-                response = get_chatgpt_response()
-               
-                content=response.content.replace("\nAnswer:","\n\n **Answer :**")
-                #content=content.replace("\nA:","\n\n **Answer :**")
-
-                #st.write(response)
-                st.write(content)
-                
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 if __name__ == "__main__":
     #components.iframe(google_analytics_js)
